@@ -1,2 +1,4 @@
 # ToDoTasksWebApplication
 This repository contains the source code for a responsive web application called ToDoTaskWebApplication that helps users manage their to-do tasks. The website is built using HTML, CSS, and JavaScript, with API calls and DOM manipulations for a dynamic user experience. It features a modern and user-friendly design, making it easy to navigate and use.options to strike through completed tasks and delete tasks.Demonstrated proficiency in front-end development skills, including HTML and CSS for creating the user interface and JavaScript for DOM manipulations and interactivity.Implemented DOM manipulations, a "Save" button to store the task list in local storage, and an "Add" button to dynamically add tasks to the task list in real-time.
+
+https://bhavani-gujju.github.io/ToDoTasksWebApplication/
