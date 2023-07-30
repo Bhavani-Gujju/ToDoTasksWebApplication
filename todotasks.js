@@ -61,12 +61,14 @@ function todoListItems(item) {
   let labelId = "label" + item.id;
   let todolistid = "todocontainer" + item.id;
 
+  //CREATING A LIST ITEM
   let listItemsEl = document.createElement("li");
   listItemsEl.classList.add("todo-item-conatainer", "d-flex", "flex-row");
   listItemsEl.id = todolistid;
   todoItemsContainerEl.appendChild(listItemsEl);
-
-  let checkBoxEl = document.createElement("input");
+  
+  //CREATING A CHECKBOX
+   let checkBoxEl = document.createElement("input");
   checkBoxEl.type = "checkbox";
   checkBoxEl.id = checkboxId;
   checkBoxEl.checked = item.isChecked;
@@ -77,8 +79,10 @@ function todoListItems(item) {
   checkBoxEl.onclick = function () {
     todoTaskCompletedOrNot(checkboxId, labelId, todolistid);
   };
+  //APPENDING TO THE LISTIEM
   listItemsEl.appendChild(checkBoxEl);
 
+  //CREATING A DIV CONTAINER
   let divContainerEl = document.createElement("div");
   divContainerEl.classList.add(
     "d-flex",
@@ -86,7 +90,8 @@ function todoListItems(item) {
     "todo-items-label-conatiner"
   );
   listItemsEl.appendChild(divContainerEl);
-
+  
+   //LABEL ELEMENT FOR THE CHECKBOX
   let labelElement = document.createElement("label");
   labelElement.setAttribute("for", checkboxId);
   labelElement.textContent = item.text;
@@ -97,10 +102,12 @@ function todoListItems(item) {
   labelElement.id = labelId;
   divContainerEl.appendChild(labelElement);
 
+  //DELETE ICON CONTAINER
   let deleteIconContainer = document.createElement("div");
   deleteIconContainer.classList.add("todo-items-delete-icon-container");
   divContainerEl.appendChild(deleteIconContainer);
 
+  //ADDING DELETE ICON TO THE DELETE CONTAINER 
   let deleteIconEl = document.createElement("i");
   deleteIconEl.classList.add("todo-items-delete-icon", "far", "fa-trash-alt");
   deleteIconContainer.appendChild(deleteIconEl);
@@ -110,6 +117,7 @@ function todoListItems(item) {
 }
 
 let todolistcount = todolist.length;
+
 // SETTING TODO TASK DETAILS
 function addingTodoTask() {
   let userInput = document.getElementById("userTaskInput");
@@ -129,8 +137,8 @@ function addingTodoTask() {
   todoListItems(newtodo);
   userInput.value = "";
 }
-// AFTER CLICK ON THE BUTTON ADD IT WILL CALL THE ADDTODO TASK FUNCTION
 
+// AFTER CLICK ON THE BUTTON ADD IT WILL CALL THE ADDTODO TASK FUNCTION
 let addToDoButton = document.getElementById("addTodoButton");
 addToDoButton.onclick = function () {
   addingTodoTask();
